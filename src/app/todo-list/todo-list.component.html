@@ -1,9 +1,19 @@
-<h3>TODO LIST</h3>
-<ul>
-    <li *ngFor="let d of view;let i = index" [attr.data-index]="i">
-        {{d}}
-        {{i}}
-        <input type="button" value="done" (click)="onDone(i)"/>
-        <input type="button" value="remove" (click)="onRemove(i)"/>
-    </li>
-</ul>
+<div class="mx-auto">
+<div class="card border-primary">
+  <div class="card-body">
+    <h4 class="card-header" style="justify-content: center">TODO LIST</h4>
+    <ul  style="list-style: none;">
+        <li class="card" style="width: fit-content;margin-top: 1rem" *ngFor="let d of view;let i = index" [attr.data-index]="i">
+          <div class="row card-body">  
+          <h6 style="margin-left: 1rem">{{i+1}}</h6>  
+            <h5 style="margin-left: 2rem">{{d}}</h5>
+            
+            <input style="margin-left: 6rem;" type="button" value="done" class="btn btn-success" (click)="onDone(i)"/>
+            <input style="margin-left: 1rem" type="button" value="remove" class="btn btn-danger" (click)="onRemove(i)"/>
+        </div>
+          </li>
+    </ul>
+  </div>
+</div>
+
+</div>
