@@ -6,9 +6,7 @@ import {DataService} from "../data.service";
   styleUrls: ['./todo-list.component.scss']
 })
 export class TodoListComponent implements OnInit {
-  view=[];
-  constructor(private data:DataService) { 
-    this.view=this.data.todos;
+  constructor(private data:DataService) {
   }
   onDone(i){
     this.data.doneTodo(i);
@@ -16,7 +14,7 @@ export class TodoListComponent implements OnInit {
   onRemove(i){
     this.data.removeTodo(i);
   }
-  ngOnInit() {
-  }
+  ngOnInit() {}
+  
 
 }

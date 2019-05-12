@@ -6,9 +6,7 @@ import {DataService} from "../data.service"
   styleUrls: ['./done-list.component.scss']
 })
 export class DoneListComponent implements OnInit {
-  view=[];
   constructor(private data:DataService) {
-    this.view=this.data.dones;
   }
   onRemove(i){
     this.data.removeDone(i);

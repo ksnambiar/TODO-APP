@@ -8,6 +8,7 @@ import {DataService} from "../data.service"
 })
 export class TodoFormComponent implements OnInit {
   todoForm: FormGroup;
+  value: String;
   constructor(private formBuilder: FormBuilder,private data:DataService) { 
     this.todoForm = this.formBuilder.group({
       todo:['', Validators.required]
@@ -15,6 +16,7 @@ export class TodoFormComponent implements OnInit {
   }
   onSubmit(){
     this.data.addTodo(this.todoForm.value.todo)
+    this.todoForm.reset()
   }
   ngOnInit() {
   }

@@ -3,10 +3,10 @@
       <div class="card-body">
         <h4 class="card-header" style="justify-content: center">DONE LIST</h4>
         <ul  style="list-style: none;">
-            <li class="card" style="width: fit-content;margin-top: 1rem" *ngFor="let d of view;let i = index" [attr.data-index]="i">
+            <li class="card" style="width: fit-content;margin-top: 1rem" *ngFor="let d of data.dones;let i = index" [attr.data-index]="i">
               <div class="row card-body">  
               <h6 style="margin-left: 1rem">{{i+1}}</h6>  
-                <h5 style="margin-left: 2rem">{{d}}</h5>
+                <h5 style="margin-left: 2rem">{{d.todo}}</h5>
                 
                 <input style="margin-left: 1rem" type="button" value="remove" class="btn btn-danger" (click)="onRemove(i)"/>
             </div>
